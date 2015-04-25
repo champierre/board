@@ -1,0 +1,15 @@
+<div id="description">
+	<h2>アカウント登録</h2>
+	<%= form_tag do %>
+		<p>ユーザー名：
+			<input type="text" name="name" size="14" maxlength="12" required>
+		</p>
+		<p>パスワード：
+			<input type="password" name="password" size="14" maxlength="12" required>
+		</p>
+		<p>パスワード（確認）：
+			<input type="password" name="password2" size="14" maxlength="12" required>
+		</p>
+		<input type="submit" value="ログイン" class="btn btn-primary btn-lg active">
+	<% end %>
+</div>

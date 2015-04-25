@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   get '/login' => 'sessions#login'
   post '/login' => 'sessions#login'
+
+  get '/signup' => 'users#signup'
+  post '/signup' => 'users#signup'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

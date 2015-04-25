@@ -1,9 +1,11 @@
 class SessionsController < ApplicationController
 	def login
 		if request.post?
-			@users = User.where("name = #{params[:name]}")
+			salt = Digest::MD5.hexdigest("#{params[:name]}")
+			password = Digest::MD5.hexdigest("#{params[:password]}#{salt}")
 
-		end	
+			@user = User.where(name: params[:name],password: password)
+			byebug
+		end
 	end
-
 end
